@@ -9,4 +9,4 @@ jobs:
       MY_ACTION: ${{ github.action}}
     steps:
     - name: My step context
-      run: echo "Hello, my action: $MY_ACTION"
+      run: echo "Hello, my action $MY_ACTION"
