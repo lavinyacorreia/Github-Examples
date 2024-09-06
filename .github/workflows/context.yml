@@ -10,4 +10,4 @@ jobs:
       run: echo "Hello, my action $MY_ACTION and job $JOB"
       env:
         MY_ACTION: ${{ github.action}}
-        JOB: ${{ job.id }}
+        JOB: ${{ job.container.id }}
