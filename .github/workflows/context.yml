@@ -5,8 +5,9 @@ on: ['push']
 jobs:
   my-context:
     runs-on: ubuntu-latest
-    env:
-      MY_ACTION: ${{ github.action}}
     steps:
     - name: My step context
-      run: echo "Hello, my action $MY_ACTION"
+      run: echo "Hello, my action $MY_ACTION and job $JOB"
+      env:
+        MY_ACTION: ${{ github.action}}
+        JOB: ${{ job.id }}
