@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: My step context
-      run: echo "Hello, my action $MY_ACTION and job $JOB"
+      run: echo "Hello, my action $MY_ACTION and status $JOB"
       env:
         MY_ACTION: ${{ github.action}}
-        JOB: ${{ job.my-context.id }}
+        JOB: ${{ job.status }}
